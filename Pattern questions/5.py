@@ -87,15 +87,39 @@ ABCDE
 
 
 '''
+# n = int(input('enter the number of row:'))
+
+# i = 1
+# startingChar = chr(65+n)
+# while i<=n:
+
+#     j = 1
+#     while j<=i:
+#         charP = chr(ord(startingChar)-i+j-1)
+#         print(charP, end="")
+#         j += 1
+
+
+#     print()
+#     i += 1
+
+'''
+A
+BB
+CCC
+DDDD
+EEEEE
+
+'''
 n = int(input('enter the number of row:'))
 
-i = 1
-startingChar = chr(65+n)
-while i<=n:
+i = 0
 
-    j = 1
+while i<n:
+    startingChar = chr(65+i)
+    j = 0
     while j<=i:
-        charP = chr(ord(startingChar)-i+j-1)
+        charP = chr(ord(startingChar))
         print(charP, end="")
         j += 1
 
