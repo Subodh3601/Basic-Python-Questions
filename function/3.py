@@ -5,31 +5,25 @@ find palindrome or not
 '''
 1.for number
 '''
-# n = int(input("enter a number"))
+n = int(input("enter a number"))
 
-# def reverseNum(num):
-#     reverseOfNumber = 0
-#     while num>0:
-#      lastDigit = num % 10
-#      reverseOfNumber = reverseOfNumber * 10 +lastDigit
-#      num //=10
-#     print("reverse",reverseOfNumber)
-#     return reverseOfNumber
+def reverseNum(num):
+    original = num
+    reverseOfNumber = 0
+    while num>0:
+     lastDigit = num % 10
+     reverseOfNumber = reverseOfNumber * 10 +lastDigit
+     num //=10
+    print("reverse",reverseOfNumber)
+    return reverseOfNumber == original
 
-# def palindrome(num):
-#    rev = reverseNum(num)
-
-#    if rev == num:
-#       return True
-#    else:
-#       return False
-# isPalindrome = palindrome(n)
-# print(isPalindrome)   
+isPalindrome = reverseNum(n)
+print(isPalindrome)   
 
 
-# '''
-# for string
-# '''
+'''
+for string
+'''
 # n = input("Enter a number: ")
 # arr = list(n)
 
@@ -52,41 +46,41 @@ find palindrome or not
 # print(isPalindrome)
 
 
-'''
-3. Using String Slicing
-'''
-n = input("Enter a number/string: ")
+# '''
+# 3. Using String Slicing
+# '''
+# n = input("Enter a number/string: ")
 
-def is_palindrome(num):
-    return num == num[::-1]
+# def is_palindrome(num):
+#     return num == num[::-1]
 
-is_palindrome_result = is_palindrome(n)
-print(is_palindrome_result)
+# is_palindrome_result = is_palindrome(n)
+# print(is_palindrome_result)
 
-'''
-4.Using a Loop
+# '''
+# 4.Using a Loop
 
-'''
-n = input("Enter a number: ")
+# '''
+# n = input("Enter a number: ")
 
-def is_palindrome(num):
-    length = len(num)
-    for i in range(length // 2):
-        if num[i] != num[length - i - 1]:
-            return False
-    return True
+# def is_palindrome(num):
+#     length = len(num)
+#     for i in range(length // 2):
+#         if num[i] != num[length - i - 1]:
+#             return False
+#     return True
 
-is_palindrome_result = is_palindrome(n)
-print(is_palindrome_result)
+# is_palindrome_result = is_palindrome(n)
+# print(is_palindrome_result)
 
-'''
-5: Using Built-in Functions
+# '''
+# 5: Using Built-in Functions
 
-'''
-n = input("Enter a number: ")
+# '''
+# n = input("Enter a number: ")
 
-def is_palindrome(num):
-    return num == ''.join(reversed(num))
+# def is_palindrome(num):
+#     return num == ''.join(reversed(num))
 
-is_palindrome_result = is_palindrome(n)
-print(is_palindrome_result)
+# is_palindrome_result = is_palindrome(n)
+# print(is_palindrome_result)
