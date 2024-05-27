@@ -43,3 +43,37 @@ else:
     print("index of number : ",index)      
 
 
+"""
+second way
+
+
+"""
+def binary_search(array,element,debug=False):
+    lower_bound=0
+    upper_bound=len(array)-1
+    while lower_bound<=upper_bound:
+        middle=(lower_bound+upper_bound)//2 #integer
+        if debug:
+            print("Lower Bound",lower_bound)
+            print("upper Bound",upper_bound)
+            print("Middle",middle)
+        if element==array[middle]:
+            return "Your Value is found at middle at index",middle
+        elif element<array[middle]: #Lesser condition
+            #no change in lower bound
+            upper_bound=middle-1
+        else:#greater condition
+            #upper bound remains same
+            lower_bound=middle+1 
+    return "Your element isn't available in the array"
+    
+
+array=[12,34,45,56,67,89]
+x1=56
+x2=57
+binary_search(array,x1,debug=True)
+
+array=[12,34,45,56,56,56,56,56,67,89]
+x1=56
+x2=57
+binary_search(array,x1,debug=True)
